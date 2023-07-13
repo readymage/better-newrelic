@@ -1,0 +1,20 @@
+{
+  "name": "readymage/module-better-newrelic",
+  "description": "Magento 2 module for including GraphQL query names and hashes for persisted-query in NewRelic reports",
+  "type": "magento2-module",
+  "require": {
+    "magento/framework": "*",
+    "jomashop/module-new-relic-monitoring-for-gql": "^1.1"
+  },
+  "license": [
+    "Open Software License (OSL)"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "ReadyMage\\BetterNewRelic\\": ""
+    }
+  }
+}
