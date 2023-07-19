@@ -2,7 +2,6 @@
   "name": "readymage/better-newrelic",
   "description": "Magento 2 module for including GraphQL query names and hashes for persisted-query in NewRelic reports",
   "type": "magento2-module",
-  "version": "1.0.0",
   "keywords": [
       "magento2",
       "newrelic",
