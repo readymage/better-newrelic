@@ -1,8 +1,17 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-    <preference
-        for="JomaShop\NewRelicMonitoring\Plugin\NewRelicMonitoring"
-        type="ReadyMage\BetterNewRelic\Plugin\NewRelicMonitoring"
-    />
+    <type name="Magento\Framework\GraphQl\Query\QueryProcessor">
+        <plugin
+            name="newRelicNameTransaction"
+            sortOrder="10"
+            type="ReadyMage\BetterNewRelic\Plugin\NewRelicMonitoring"
+        />
+    </type>
+    <type name="Magento\Framework\GraphQl\Query\ErrorHandler">
+        <plugin
+            name="send_exception_trace_to_newrelic"
+            type="ReadyMage\BetterNewRelic\Plugin\ErrorHandler"
+        />
+    </type>
 </config>

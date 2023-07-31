@@ -10,12 +10,13 @@ use Magento\Framework\GraphQl\Query\QueryProcessor;
 use Magento\Framework\GraphQl\Query\Resolver\ContextInterface;
 use Magento\Framework\GraphQl\Schema;
 use Magento\Framework\App\RequestInterface;
-use JomaShop\NewRelicMonitoring\Helper\NewRelicReportData;
+use Magento\NewRelicReporting\Model\NewRelicWrapper;
+use ReadyMage\BetterNewRelic\Helper\NewRelicReportData;
 
 class NewRelicMonitoring
 {
     /**
-     * @var \Magento\NewRelicReporting\Model\NewRelicWrapper
+     * @var NewRelicWrapper
      */
     private $newRelicWrapper;
 
@@ -31,11 +32,11 @@ class NewRelicMonitoring
 
     /**
      * NewRelicMonitoring constructor.
-     * @param \Magento\NewRelicReporting\Model\NewRelicWrapper $newRelicWrapper
-     * @param \JomaShop\NewRelicMonitoring\Helper\NewRelicReportData $dataHelper
+     * @param NewRelicWrapper $newRelicWrapper
+     * @param NewRelicReportData $dataHelper
      */
     public function __construct(
-        \Magento\NewRelicReporting\Model\NewRelicWrapper       $newRelicWrapper,
+        NewRelicWrapper                                        $newRelicWrapper,
         NewRelicReportData                                     $dataHelper,
         RequestInterface                                       $request
     )
