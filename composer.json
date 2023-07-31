@@ -9,8 +9,7 @@
       "ReadyMage"
   ],
   "require": {
-    "magento/framework": "*",
-    "jomashop/module-new-relic-monitoring-for-gql": "^1.1"
+    "magento/framework": "*"
   },
   "license": [
     "OSL-3.0"

@@ -8,3 +8,7 @@ Add to any Magento 2 project with the following commands:
   composer require readymage/better-newrelic --no-interaction --update-no-dev --prefer-dist
   php bin/magento module:enable ReadyMage_BetterNewRelic
   ```
+
+## Notice
+
+Based on [jomashop/automatic-graphql-transaction-naming-for-new-relic](https://github.com/joma-webdevs/automatic-graphql-transaction-naming-for-new-relic)
